@@ -109,6 +109,45 @@ body {
 .navbar-toggler-icon {
   filter: brightness(1.2);
 }
+
+/* Pin navbar toggler to far-right corner on mobile */
+@media (max-width: 991px) {
+  .custom-navbar {
+    position: relative;
+  }
+
+  .custom-navbar .navbar-toggler {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    z-index: 1300;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(10,25,47,0.6);
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .custom-navbar .collapse.show {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(10,25,47,0.98);
+    z-index: 1200;
+    padding: 12px 18px 18px;
+  }
+
+  .custom-navbar .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .navbar-toggler-icon { filter: invert(1) brightness(2); }
+}
   transition: width 0.3s ease;
 }
 
