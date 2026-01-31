@@ -56,29 +56,20 @@ body {
 }
 
 /* Navbar */
-.custom-navbar {
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  padding: 0 40px !important;
-  height: 70px !important;
-  width: 100% !important;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  z-index: 1000 !important;
-  box-shadow: 0 2px 15px rgba(0, 188, 212, 0.1) !important;
-  background: rgba(10, 25, 47, 0.95) !important;
-  backdrop-filter: blur(10px) !important;
-}
-
-.custom-navbar .container {
-  width: 100% !important;
-  max-width: none !important;
-  padding: 0 !important;
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0, 188, 212, 0.1);
+  background: rgba(10, 25, 47, 0.95);
+  backdrop-filter: blur(10px);
 }
 
 .navbar-brand {
@@ -242,13 +233,15 @@ h2 {
   font-weight: 700;
   letter-spacing: 2px;
   margin-bottom: 20px;
-  display: inline-block;
-  max-width: 560px;
 }
 
 @keyframes typing {
-  from { max-width: 0; }
-  to { max-width: 100%; }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink {
@@ -949,38 +942,168 @@ footer:hover {
   color: #93c5fd;
 }
 
-/* No responsive design - fixed desktop layout for all devices */
-
-/* Responsive adjustments (mobile-friendly) */
+/* Responsive adjustments */
 @media (max-width: 1024px) {
-  .typing { max-width: 480px; font-size: 2.4rem; }
-  .custom-navbar { padding: 0 24px !important; }
+  section {
+    padding: 80px 20px 60px 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .typing {
+    font-size: 2.5rem;
+  }
 }
 
 @media (max-width: 768px) {
-  .typing { max-width: 80vw; font-size: 1.9rem; }
-  .avatar { width: 140px; height: 140px; }
-  .navbar-brand { font-size: 1.2rem !important; }
-  .custom-navbar { padding: 0 16px !important; }
-  .nav-link { margin: 6px 8px; }
-  .mobile-phone { transform: scale(0.95); }
+  #navbar {
+    padding: 0 20px;
+    height: auto;
+  }
+
+  .navbar-brand {
+    font-size: 1.3rem !important;
+  }
+
+  .nav-link {
+    margin: 8px 0;
+    padding: 8px 0;
+  }
+
+  section {
+    padding: 60px 15px 50px 15px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+
+  .typing {
+    font-size: 1.8rem;
+    white-space: normal;
+    border-right: 2px solid #00bcd4;
+  }
+
+  #about p {
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .skills {
+    gap: 8px;
+  }
+
+  .skills span {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  /* Timeline responsive */
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 70px;
+    text-align: left;
+  }
+
+  .timeline-item.left .timeline-dot,
+  .timeline-item.right .timeline-dot {
+    left: 7px;
+    right: auto;
+  }
+
+  .timeline-item:hover .timeline-dot {
+    left: 3px;
+  }
+
+  .experience-card {
+    padding: 20px;
+  }
+
+  .project-card {
+    margin-bottom: 20px;
+  }
+
+  .project-image {
+    height: 150px;
+  }
+
+  .writing-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .contact-icons {
+    gap: 1.5rem;
+  }
+
+  .contact-icons a {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  footer {
+    padding: 20px 0;
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 480px) {
-  .typing { max-width: 90vw; font-size: 1.6rem; }
-  .avatar { width: 120px; height: 120px; }
-  .navbar-brand { font-size: 1.05rem !important; }
-  .custom-navbar .container { padding-left: 8px !important; padding-right: 8px !important; }
-}
+  #navbar {
+    padding: 0 15px;
+  }
 
-/* Toggler button styles (uses FontAwesome bars icon) */
-.navbar-toggler {
-  border: none;
-  background: transparent;
-  padding: 6px 8px;
-}
+  section {
+    padding: 50px 10px 40px 10px;
+  }
 
-.navbar-toggler i {
-  color: #00bcd4;
-}
+  h2 {
+    font-size: 1.5rem;
+  }
 
+  .avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .typing {
+    font-size: 1.4rem;
+  }
+
+  #introduction > p {
+    font-size: 1rem;
+  }
+
+  .skills span {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+
+  .writing-grid {
+    gap: 15px;
+  }
+
+  .contact-icons {
+    gap: 1rem;
+  }
+
+  .contact-icons a {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+}
