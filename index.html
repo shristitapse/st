@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>shristi</title>
+  <meta name="description" content="Shristi Tapse - Full-stack developer exploring web, mobile, and creative technologies">
+  <meta name="theme-color" content="#0a192f">
+  <meta property="og:title" content="Shristi Tapse - Portfolio">
+  <meta property="og:description" content="Archive of my creations - projects, writings, and experiments">
+  <title>Shristi Tapse - Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
    <link rel="icon" href="assets/favicon.png" type="image/png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> 
   <link rel="stylesheet" href="style.css">
-
 </head>
-<body>
 
-  <!-- Navbar -->
+<body>
+  <!----------------------------------------Navbar--------------------------------------------------->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm custom-navbar">
     <div class="container">
       <a class="navbar-brand" href="#introduction">Shristi Tapse</a>
@@ -21,14 +24,29 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#introduction">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        </ul>
-        <div class="d-flex ms-3">
-          <a href="https://www.linkedin.com/in/shristi-tapse/" target="_blank" class="text-white me-2"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/shristislastbraincells" target="_blank" class="text-white me-2"><i class="fab fa-github"></i></a>
-          <a href="https://shristitapse.substack.com/" target="_blank" class="text-white"><i class="fas fa-feather"></i></a>
-        </div>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="experienceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Experience</a>
+            <ul class="dropdown-menu" aria-labelledby="experienceDropdown">
+              <li><a class="dropdown-item" href="#experience">Education</a></li>
+              <li><a class="dropdown-item" href="#work-experience">Work</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tech</a>
+            <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+              <li><a class="dropdown-item" href="#projects">Projects</a></li>
+              <li><a class="dropdown-item" href="#research">Research Papers</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="artDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Art</a>
+            <ul class="dropdown-menu" aria-labelledby="artDropdown">
+              <li><a class="dropdown-item" href="#writing">Writing</a></li>
+              <li><a class="dropdown-item" href="#music">Sound</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#contact_me">Contact</a></li>    
+            </ul>
       </div>
     </div>
   </nav>
@@ -36,84 +54,253 @@
 
   <section id="introduction" class="d-flex flex-column justify-content-center align-items-center text-center" style="min-height:70vh; padding-top:100px;">
     <img src="assets/logo.png" alt="Logo" class="avatar mb-3">
-    <h1 class="typing">hey, this is shristi</h1>
+    <h1 class="typing">hey!!this is shristi</h1>
     <p>archive of my creations</p>
   </section>
 
-  <!-- About Section -->
+  <!-----------------------------------------------About Section------------------------------------->
   <section id="about" class="py-5">
-    <div class="container text-center">
+    <div class="container">
       <h2>/about me</h2>
-      <p class="my-3">Currently pursuing my B.Tech in Computer Science and Engineering @SPIT after completing my diploma in Computer Engineering @AISSMS. With a strong foundation in computer engineering, I’m now delving deeper into the field — exploring how to design, build, and implement ideas into reality.</p>
-      <h3>Skills</h3>
-      <div class="skills mt-3">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Flutter</span>
-        <span>Java</span>
-        <span>C</span>
-        <span>C++</span>
-        <span>Python</span>
-        <span>SQL</span>
-        <span>IoT</span>
-        <span>ML</span>
+      <div class="about-content">
+        <div class="about-text">
+          <h3 class="about-subtitle">At the Intersection of Art & Science</h3>
+          <p>I find myself at the intersection where art and science meet. Some days that means building systems, experimenting with code, or breaking problems down until they make sense. Other days it looks like writing, researching ideas, or translating thoughts into sound.</p>
+          <p>I'm interested in how structure creates freedom in software, in stories, and in music and how curiosity moves across disciplines without asking permission.</p>         
+          <p class="about-closing"><em>This site is a living archive of what I'm learning, building, and exploring over time.</em></p>
+        </div>
+      </div>
+      
+      <div class="skills-section mt-5">
+        <h3 class="text-center mb-4">Skills & Technologies</h3>
+        <div class="skills-container">
+          <div class="skill-category">
+            <h5>Frontend</h5>
+            <div class="skills">
+              <span data-tooltip="Web Markup">HTML</span>
+              <span data-tooltip="Styling">CSS</span>
+              <span data-tooltip="Interactivity">JavaScript</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h5>Mobile & Desktop</h5>
+            <div class="skills">
+              <span data-tooltip="Cross-platform Apps">Flutter</span>
+              <span data-tooltip="Object-Oriented">Java</span>
+              <span data-tooltip="Systems Programming">C++</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h5>Backend & Data</h5>
+            <div class="skills">
+              <span data-tooltip="Scripting">Python</span>
+              <span data-tooltip="Databases">SQL</span>
+              <span data-tooltip="Systems Programming">C</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h5>Emerging Tech</h5>
+            <div class="skills">
+              <span data-tooltip="IoT Devices">IoT</span>
+              <span data-tooltip="Machine Learning">ML</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Experience Section -->
-  <section id="experience" class="py-5 ">
-    <div class="container text-center">
-      <h2>/experience</h2>
-      <p class="my-3">my experience.</p>
+  <!------------------------------------Experience Section----------------------------------------->
+  <section id="experience" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">/education</h2>
+      <div class="timeline">
+        <div class="timeline-item left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>10th Grade</h4>
+            <p class="timeline-date">2010 - 2022</p>
+            <p class="timeline-text">St. Helena's School (ICSE) - Strong foundational education with focus on academics and co-curricular activities.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>Diploma in Computer Engineering</h4>
+            <p class="timeline-date">2022 - 2025</p>
+            <p class="timeline-text">AISSMS (Pune) - Built strong foundational knowledge in programming, databases, and hands-on technical skills in IoT and embedded systems.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>B.Tech in Computer Science & Engineering</h4>
+            <p class="timeline-date">2025 - 2028</p>
+            <p class="timeline-text">SPIT (Mumbai) - Deepening knowledge in advanced CS concepts, data structures, algorithms, and software engineering principles.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>Minors in Management</h4>
+            <p class="timeline-date">2026 - 2028</p>
+            <p class="timeline-text">SPJIMR (Mumbai) - Gaining foundational management skills in leadership, strategy, finance, and organizational behavior to complement technical expertise.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!---------------------------------------Work Experience Section---------------------------------------->
+  <section id="work-experience" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">/work experience</h2>
+      <div class="timeline">
+        <div class="timeline-item left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>Iot Intern</h4>
+            <p class="timeline-date">IoGenies Solutions • July 2024</p>
+            <p class="timeline-text">Worked on developing IoT Cloud applications using ThingsBoard Platform for Temperature Monitoring and Control Systems.Also contributed to Flutter applications.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>Volunteer</h4>
+            <p class="timeline-date">Institution of Engineers[IEI] • March 2025</p>
+            <p class="timeline-text">Organized the AISPATJ-2025 Paper Presentation Competition.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!---------------------------------------Projects Section---------------------------------------->
   <section id="projects" class="py-5">
     <div class="container">
       <h2 class="text-center mb-5">/projects</h2>
       <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="assets/project1.png" class="card-img-top" alt="Project 1">
-            <div class="card-body">
-              <h5 class="card-title">Project 1</h5>
-              <p class="card-text">Short description of the project.</p>
-              <a href="#" class="btn btn-primary">View</a>
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/Projects/Weather.jpg" alt="Weather Monitoring System">
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="assets/project2.png" class="card-img-top" alt="Project 2">
-            <div class="card-body">
-              <h5 class="card-title">Project 2</h5>
-              <p class="card-text">Short description of the project.</p>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="assets/project3.png" class="card-img-top" alt="Project 3">
-            <div class="card-body">
-              <h5 class="card-title">Project 3</h5>
-              <p class="card-text">Short description of the project.</p>
-              <a href="#" class="btn btn-primary">View</a>
+            <div class="project-body">
+              <h5>IoT & ML Based Weather Monitoring and Prediction System</h5>
+              <p>Developed an IoT-enabled weather monitoring system with real-time visualization on ThingsBoard and Integrated machine learning models (Random Forest) for precise prediction of temperature, humidity, and rainfall. Published in the International Journal for Research in Applied Science & Engineering Technology (IJRASET).</p>
+              <div class="tech-stack">
+                <span>Flutter</span>
+                <span>Dart</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <!-------------------------------------Research Papers Section------------------------------------------>
+<section id="research" class="py-5">
+  <div class="container">
+    <h2 class="text-center">/research papers</h2>
+
+    <div class="research-grid">
+      <a href="https://www.ijraset.com/best-journal/integrated-iot-based-weather-monitoring-system-and-ml-based-weather-prediction-system-" class="research-card">
+        <div class="research-image">
+          <img src="assets/Paper/weather.png" alt="Weather Monitoring Research Paper">
+        </div>
+        <div class="research-card-body">
+          <h5>Integrated IoT Based Weather Monitoring and ML Based Weather Prediction</h5>
+          <p class="research-subtitle">IJRASET • 2025</p>
+          <p class="research-text">Developed an IoT-enabled weather monitoring system with real-time visualization and machine learning-based weather prediction capabilities.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+    <!-------------------------------------Writing Section------------------------------------------>
+<section id="writing" class="py-5">
+  <div class="container">
+    <h2 class="text-center">/writing</h2>
+
+    <div class="writing-grid">
+      <a href="https://substack.com/home/post/p-175105782" class="writing-card">
+        <div class="writing-image">
+          <img src="assets/substack/post_1.webp" alt="Post cover">
+        </div>
+        <div class="writing-card-body">
+          <h5>maybe i am late</h5>
+          <span>Thoughts & Reflections</span>
+        </div>
+      </a>
+    </div>
+    <p class="text-center mt-5 opacity-75"><a href="https://shristitapse.substack.com/" style="color: #00bcd4; text-decoration: none;">Read more on Substack →</a></p>
+  </div>
+</section>
+
+
+<!-------------------------------------Music Section------------------------------------------>
+<section id="music" class="py-5 text-center">
+  <h2>/sound</h2>
+  <p class="opacity-75">experiments in music & audio</p>
+  <div class="coming-soon">
+    <i class="fa-solid fa-headphones fa-2x"></i>
+    <p class="mt-3">coming soon</p>
+  </div>
+</section>
+
+
+  <!-------------------------------------Contact Section------------------------------------------>
+<section id="contact_me" class="contact-section">
+  <div class="container text-center">
+    <h2>/contact</h2>
+    <p class="contact-text">
+      Want to collaborate, chat, or just say hi?
+    </p>
+
+    <div class="contact-icons">
+      <a href="https://www.linkedin.com/in/shristi-tapse/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/shristitapse" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://shristitapse.substack.com/" target="_blank" aria-label="Substack">
+        <i class="fas fa-feather"></i>
+      </a>
+      <a href="https://instagram.com/shristitapse" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="mailto:shristi.tapse25@spit.ac.in" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
 
  <footer>
   <i class="fa-regular fa-copyright"></i>Built by Shristi Tapse
 </footer>
 
-  <!-- Bootstrap JS -->
+  <!------------------------------------------Bootstrap JS----------------------------------------->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Smooth scroll behavior for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
