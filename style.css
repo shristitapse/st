@@ -243,16 +243,12 @@ h2 {
   letter-spacing: 2px;
   margin-bottom: 20px;
   display: inline-block;
-  width: 560px;
+  max-width: 560px;
 }
 
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+  from { max-width: 0; }
+  to { max-width: 100%; }
 }
 
 @keyframes blink {
@@ -954,3 +950,37 @@ footer:hover {
 }
 
 /* No responsive design - fixed desktop layout for all devices */
+
+/* Responsive adjustments (mobile-friendly) */
+@media (max-width: 1024px) {
+  .typing { max-width: 480px; font-size: 2.4rem; }
+  .custom-navbar { padding: 0 24px !important; }
+}
+
+@media (max-width: 768px) {
+  .typing { max-width: 80vw; font-size: 1.9rem; }
+  .avatar { width: 140px; height: 140px; }
+  .navbar-brand { font-size: 1.2rem !important; }
+  .custom-navbar { padding: 0 16px !important; }
+  .nav-link { margin: 6px 8px; }
+  .mobile-phone { transform: scale(0.95); }
+}
+
+@media (max-width: 480px) {
+  .typing { max-width: 90vw; font-size: 1.6rem; }
+  .avatar { width: 120px; height: 120px; }
+  .navbar-brand { font-size: 1.05rem !important; }
+  .custom-navbar .container { padding-left: 8px !important; padding-right: 8px !important; }
+}
+
+/* Toggler button styles (uses FontAwesome bars icon) */
+.navbar-toggler {
+  border: none;
+  background: transparent;
+  padding: 6px 8px;
+}
+
+.navbar-toggler i {
+  color: #00bcd4;
+}
+
